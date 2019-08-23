@@ -1,0 +1,27 @@
+ class Personagem{
+   String tipo;
+   String nome;
+   int _vitalidade;
+   Personagem(String tipo, String nome, {int vitalidade}){
+     _vitalidade=8000;
+        this.nome=nome;
+        this.tipo=tipo;
+        _vitalidade =vitalidade;
+   }
+   void curar(){
+      _vitalidade=_vitalidade + 10;
+  }
+   void receberDano(){
+     _vitalidade=_vitalidade - 10;
+  }
+  int get obterVitalidade{
+    return _vitalidade;
+ }
+  
+ }
+
+void main(){
+  Personagem p1 = Personagem("jedi","luke skywalker", vitalidade:8000);
+  print("O personagem ${p1.nome} é um ${p1.tipo} com vitalidade de ${p1._vitalidade}");
+}
+   
